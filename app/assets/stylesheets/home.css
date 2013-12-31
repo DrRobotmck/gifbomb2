@@ -1,0 +1,44 @@
+body {
+	background: url(http://landor.com/media/456438/bombs.jpg) !important;
+	background-size: cover;
+}
+#search{
+	text-align: center;
+}
+h1.title{
+	color:whitesmoke;
+}
+.indigif{
+	border-radius: 20px;
+	border: 3px whitesmoke  solid;
+}
+li{
+	text-align: center;
+}
+h6.clicker{
+	color: aliceblue;
+	height: 1em;
+}
+input#search_bar{
+	background: rgba(0,0,0,.1);
+	color: whitesmoke;
+	border: 1px solid rgba(34,31,31,.1);
+	border: none;
+	text-align: center; 
+	font-size: 1.25em;
+}
+#explode{
+	background: rgba(0,0,0,.0);
+}
+img:hover{
+	border-radius: 20px;
+	-moz-box-shadow: 0 0 5px 5px rgba(34,31,31,.1);
+	-webkit-box-shadow: 0 0 5px 5px rgba(34,31,31,.1);
+	box-shadow: 0 0 5px 5px rgba(34,31,31,.1);
+}
+#explode:focus{
+	outline:none;
+}
+.header{
+	margin-top: 2em;
+}
