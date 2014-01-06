@@ -9,7 +9,7 @@ SearchView = Backbone.View.extend({
 		e.preventDefault();
 		$("ul#gif").empty();
 		var term = this.$el.find("input[name='search']").val();
-		$.getJSON("http://api.giphy.com/v1/gifs/search?q="+term+"&api_key=dc6zaTOxFJmzC&limit=40", this.results);
+		$.getJSON("http://api.giphy.com/v1/gifs/search?q="+term+"&api_key=dc6zaTOxFJmzC&limit=100", this.results);
 		console.log("going to results")
 		this.$el.find("input[name='search']").reset;
 		},

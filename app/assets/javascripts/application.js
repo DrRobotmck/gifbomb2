@@ -25,5 +25,8 @@ window.onload = function(){
 	allGifs = new GifBomb();
 	search = new SearchView({collection: allGifs});
 	gif_view = new IndividualView({collection: allGifs});
+
+	router = new Router();
+	Backbone.history.start();
 }
 	
