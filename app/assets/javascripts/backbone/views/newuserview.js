@@ -1,4 +1,4 @@
-var SignUp =Backbone.View.extend({
+var SignUp = Backbone.View.extend({
 	el: "div#searchoruser",
 	template: _.template($("script[id='new_user_template']").html()),
 
@@ -23,7 +23,7 @@ var SignUp =Backbone.View.extend({
 			password: password,
 			password_confirmation: password_confirmation
 		}
-
-		console.log(user);
+		userAccount = new NewUser({user: user })
+		userAccount.addToDatabase();
 	}
 }) 

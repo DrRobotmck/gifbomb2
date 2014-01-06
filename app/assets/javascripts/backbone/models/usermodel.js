@@ -1,5 +1,9 @@
 var NewUser = Backbone.Model.extend({
-	defaults: {
-		avatar: "http://www.placekitten.com/200/200"
+	url: "users",
+	addToDatabase: function(){
+		// account = this.toJSON();
+		this.save({success: function(){
+			console.log("got it")
+		}})
 	}
 })
