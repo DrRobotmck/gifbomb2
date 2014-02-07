@@ -1,8 +1,11 @@
 
 GifView = Backbone.View.extend({
 	tagName: "li",
-	template: _.template($("script[type='text/html']").html()),
+	template: _.template($("#gif_template").html()),
 	initialize: function(){
+		// listens to a router event and removes the views
+		this.listenTo(allGifs,"reset",this.remove);
+		// renders a gifView
 		this.render();
 	},
 	render: function(){
@@ -16,11 +19,11 @@ GifView = Backbone.View.extend({
 		
 	},
 	changeSrc: function(){
-		this.template = _.template('<h6 class="clicker" id="<%= this.cid %>">right-click for link</h6><img class="indigif"src="<%=gif_url%>"><button id="favorite" class="tiny round">Favorite</button>');
+		this.template = _.template('<h6 class="clicker" id="<%= this.cid %>">right-click for link</h6><img class="indigif"src="http://media.giphy.com/media/<%=gif_url%>/giphy.gif"><button id="favorite" class="tiny round">Favorite</button>');
 		this.render();
 	},
 	changeBack: function(){
-		this.template = _.template($("script[type='text/html']").html());
+		this.template = _.template($("#gif_template").html());
 		this.render();
 	},
 	caption: function(){
