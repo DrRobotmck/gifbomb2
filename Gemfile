@@ -64,4 +64,6 @@ group :test do
   gem 'simplecov', require: false
 end
 # Heroku dependency
+gem 'handlebars_assets'
+gem 'zeroclipboard-rails'
 gem 'rails_12factor', group: :production

@@ -1,5 +1,4 @@
 var GifBomb = Backbone.Collection.extend({
 	model: GifModel,
-	url: "gifs"
+	localStorage: new Backbone.LocalStorage("gifs-backbone")
 });
-var allGifs = new GifBomb();

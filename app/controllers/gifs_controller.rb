@@ -34,7 +34,7 @@ def set_gif
 	@gif = Gif.find(params[:id])
 end
 def gif_params
-	params.require(:gif).permit(:gif_url)
+	params.require(:gif)
 end
 
 end

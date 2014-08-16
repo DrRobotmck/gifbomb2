@@ -758,6 +758,7 @@
       options || (options = {});
       for (var i = 0, l = this.models.length; i < l; i++) {
         this._removeReference(this.models[i]);
+        this.models[i].trigger('remove', this.models[i], this);
       }
       options.previousModels = this.models;
       this._reset();

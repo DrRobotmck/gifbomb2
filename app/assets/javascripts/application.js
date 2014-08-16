@@ -14,16 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require underscore
+//= require handlebars
+//= require_tree ./templates
 //= require backbone
+//= require backbone-localstorage
+//= require zeroclipboard
 //= require_tree ./backbone/models
 //= require_tree ./backbone/collections
-//= require_tree ./backbone/templates
 //= require_tree ./backbone/views
 //= require_tree ./backbone/routers
 
 window.onload = function(){
-	allGifs = new GifBomb();
-	search = new SearchView({collection: allGifs});
-	gif_view = new IndividualView({collection: allGifs});
+  gifCollection = new GifBomb()
+	allGifs = new AllGifs({collection: gifCollection});
+	search = new SearchView({collection: gifCollection});
+	// gif_view = new IndividualView({collection: allGifs});
 }
 	

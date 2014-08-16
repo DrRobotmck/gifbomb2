@@ -42,3 +42,8 @@ img:hover{
 .header{
 	margin-top: 2em;
 }
+.gif {
+	width: 300px;
+	height: 350px;
+	float: left;
+}
